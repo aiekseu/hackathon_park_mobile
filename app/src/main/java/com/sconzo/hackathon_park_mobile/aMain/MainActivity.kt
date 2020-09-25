@@ -1,9 +1,5 @@
 package com.sconzo.hackathon_park_mobile.aMain
 
-import android.app.PendingIntent
-import android.content.Intent
-import android.nfc.NfcAdapter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import com.sconzo.hackathon_park_mobile.R
@@ -57,7 +53,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 
     companion object {
 
-        // TODO: 31.08.2020 Костыль с интернет проверкой
+
 
         var internetListener: () -> Boolean = { false }
 

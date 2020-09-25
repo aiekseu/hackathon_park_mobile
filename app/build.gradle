@@ -8,7 +8,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.sconzo.outofturn"
+        applicationId "com.sconzo.hackathon_park_mobile"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
@@ -76,6 +76,7 @@ dependencies {
     // Moxy
     implementation "com.github.moxy-community:moxy:$moxy_version"
     implementation "com.github.moxy-community:moxy-app-compat:$moxy_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "com.github.moxy-community:moxy-compiler:$moxy_version"
 
     // RxJava 2

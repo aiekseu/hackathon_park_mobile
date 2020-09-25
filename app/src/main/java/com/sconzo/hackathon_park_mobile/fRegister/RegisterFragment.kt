@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.sconzo.hackathon_park_mobile.*
 import kotlinx.android.synthetic.main.fragment_register_firstpage.*
 
+
 import moxy.MvpAppCompatFragment
 import moxy.presenter.InjectPresenter
 
@@ -49,26 +50,9 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
 
         register_edt_name.setErrorListener(register_edt_nameLayout)
         register_edt_email.setErrorListener(register_edt_emailLayout)
-//        register_edt_region.setErrorListener(register_edt_regionLayout)
-//        register_edt_city.setErrorListener(register_edt_cityLayout)
         register_edt_password.setErrorListener(register_edt_passwordLayout)
         register_edt_repeatPassword.setErrorListener(register_edt_repeatPasswordLayout)
 
-//        register_edt_region.setAdapter(
-//            ArrayAdapter(
-//                requireContext(),
-//                android.R.layout.simple_list_item_1,
-//                defaultRegions
-//            )
-//        )
-//
-//        register_edt_city.setAdapter(
-//            ArrayAdapter(
-//                requireContext(),
-//                android.R.layout.simple_list_item_1,
-//                defaultCities
-//            )
-//        )
 
         register_edt_name.doFocusGone {
             registerPresenter.isNameValid(text.toString())
@@ -76,12 +60,7 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
         register_edt_email.doFocusGone {
             registerPresenter.isEmailValid(text.toString())
         }
-//        register_edt_region.doFocusGone {
-//            registerPresenter.isRegionValid(text.toString(), defaultRegions)
-//        }
-//        register_edt_city.doFocusGone {
-//            registerPresenter.isCityValid(text.toString())
-//        }
+
         register_edt_password.doFocusGone {
             registerPresenter.isPasswordValid(text.toString())
         }
@@ -92,14 +71,17 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
             )
         }
 
-        register_edt_repeatPassword.setOnEditorActionListener { _, actionId, _ ->
-            return@setOnEditorActionListener if (actionId == EditorInfo.IME_ACTION_GO) {
-                hideKeyboard()
-                register_btn_continue.performClick()
-                true
-            } else {
-                false
-            }
+//        register_edt_repeatPassword.setOnEditorActionListener { _, actionId, _ ->
+//            return@setOnEditorActionListener if (actionId == EditorInfo.IME_ACTION_GO) {
+//                hideKeyboard()
+//                register_btn_continue.performClick()
+//                true
+//            } else {
+//                false
+//            }
+//        }
+        register_btn_continue.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_registerTwoFragment)
         }
 
     }

@@ -47,8 +47,4 @@
         <item name="colorControlActivated">@color/colorCursor</item>
     </style>
 
-    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
-        <item name="backgroundTint">@color/color_states_button</item>
-    </style>
-
 </resources>

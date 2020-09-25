@@ -42,7 +42,7 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
         ) {
             inciteProgressBar(true)
             val user =
-                User(email = email, name = name, region = "", city = "", password = password)
+                User(email = email, name = name, password = password)
             val disposableRegisterUser = model.registerUser(ServerRequest.registerUser(user))
                 .subscribe(
                     { response ->
@@ -80,9 +80,7 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
 
     private fun isDataValid(
         email: String,
-//        region: String,
-//        defaultRegions: Array<String>,
-//        city: String,
+
         name: String,
         password: String,
         password2: String

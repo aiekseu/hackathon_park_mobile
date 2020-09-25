@@ -1,6 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/register3_tv_titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@drawable/rectangle_with_rounded_corners_blue"
+        android:fontFamily="@font/franxurter_totally_medium"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:text="Регистрация"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/register3_btn_back"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="@id/register3_tv_titleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/register3_tv_titleText" />
+
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:elevation="-1dp"
+        android:scaleX="1.09"
+        android:src="@drawable/rectangle_with_rounded_corners_light_blue"
+        app:layout_constraintBottom_toBottomOf="@id/register3_tv_titleText"
+        app:layout_constraintEnd_toEndOf="@id/register3_tv_titleText"
+        app:layout_constraintStart_toStartOf="@id/register3_tv_titleText"
+        app:layout_constraintTop_toTopOf="@id/register3_tv_titleText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register3_edt_nameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        android:layout_marginTop="32dp"
+        android:hint="Рост"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register3_tv_titleText"
+        app:layout_constraintVertical_bias="0.1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register3_edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri"
+            android:inputType="number|textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register3_edt_surnameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        android:hint="Кол-во детей, если имеются"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register3_edt_nameLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register3_edt_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri"
+            android:inputType="number|textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/register3_tv_marriageStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:text="Состоите ли вы в браке?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/register3_edt_surnameLayout"
+        app:layout_constraintTop_toBottomOf="@id/register3_edt_surnameLayout" />
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/register3_sw_ifMarried"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@id/register3_tv_marriageStatus"
+        app:layout_constraintTop_toTopOf="@id/register3_tv_marriageStatus" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register3_btn_continue"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:fontFamily="@font/franxurter_totally_medium"
+        android:letterSpacing="0"
+        android:paddingHorizontal="24dp"
+        android:text="Продолжить"
+        android:textSize="26sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <ImageView
+        android:id="@+id/register3_imv_firstDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/register_round"
+        app:layout_constraintBottom_toBottomOf="@id/register3_imv_secondDot"
+        app:layout_constraintEnd_toEndOf="@id/register3_imv_secondDot" />
+
+    <ImageView
+        android:id="@+id/register3_imv_secondDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/register_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register3_btn_continue"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/register3_imv_thirdDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:src="@drawable/register_round_filled"
+        app:layout_constraintBottom_toBottomOf="@id/register3_imv_secondDot"
+        app:layout_constraintStart_toStartOf="@id/register3_imv_secondDot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
