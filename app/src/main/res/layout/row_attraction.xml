@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    app:cardBackgroundColor="@color/colorBackground"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Media -->
+        <ImageView
+            android:id="@+id/attr_iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wedding_carousel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title, secondary and supporting text -->
+        <ImageView
+            android:id="@+id/attr_iv_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_baseline_mood_36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attr_iv_photo" />
+
+        <TextView
+            android:id="@+id/attr_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/dm_sans_regular"
+            android:text="Свадебная Карусель"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/attr_iv_emoji"
+            app:layout_constraintTop_toBottomOf="@id/attr_iv_photo" />
+
+        <TextView
+            android:id="@+id/attr_tv_secondaryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_regular"
+            android:text="Нижний парк, г. Липецк"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/attr_tv_title"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_title" />
+
+        <TextView
+            android:id="@+id/attr_tv_textMinutesToWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_regular"
+            android:text="Среднее время в очереди: "
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/attr_tv_secondaryTitle"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_secondaryTitle" />
+
+        <TextView
+            android:id="@+id/attr_tv_minutesToWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="10 мин."
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/attr_tv_textMinutesToWait"
+            app:layout_constraintStart_toEndOf="@id/attr_tv_textMinutesToWait"
+            app:layout_constraintTop_toTopOf="@+id/attr_tv_textMinutesToWait" />
+
+
+        <!--    Buttons and interactions  -->
+        <View
+            android:id="@+id/attr_firstSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#D8D1E7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_textMinutesToWait" />
+
+        <ImageButton
+            android:id="@+id/attr_btn_findOnTheMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:src="@drawable/ic_baseline_location_on_24"
+            android:tint="#967ACC"
+            app:layout_constraintEnd_toStartOf="@+id/attr_btn_buyTicket"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attr_firstSeparator" />
+
+        <TextView
+            android:id="@+id/attr_tv_titleMapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_regular"
+            android:text="Найти на карте"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/attr_btn_findOnTheMap"
+            app:layout_constraintStart_toStartOf="@id/attr_btn_findOnTheMap"
+            app:layout_constraintTop_toBottomOf="@id/attr_btn_findOnTheMap" />
+
+        <ImageButton
+            android:id="@+id/attr_btn_buyTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:src="@drawable/ic_baseline_money_24"
+            android:tint="#967ACC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/attr_btn_findOnTheMap"
+            app:layout_constraintTop_toTopOf="@+id/attr_btn_findOnTheMap" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Купить билет"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/attr_btn_buyTicket"
+            app:layout_constraintStart_toStartOf="@id/attr_btn_buyTicket"
+            app:layout_constraintTop_toBottomOf="@id/attr_btn_buyTicket" />
+
+        <View
+            android:id="@+id/attr_secondSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#D8D1E7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_titleMapButton" />
+
+
+        <!--    Info    -->
+        <TextView
+            android:id="@+id/attr_tv_titleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/dm_sans_regular"
+            android:text="Время работы:"
+            app:layout_constraintEnd_toStartOf="@+id/attr_tv_titleAge"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attr_secondSeparator" />
+
+        <TextView
+            android:id="@+id/attr_tv_workingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="9:00 - 18:00"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/attr_tv_titleTime"
+            app:layout_constraintStart_toStartOf="@id/attr_tv_titleTime"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_titleTime" />
+
+        <TextView
+            android:id="@+id/attr_tv_titleAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/dm_sans_regular"
+            android:text="Возраст:"
+            app:layout_constraintEnd_toStartOf="@+id/attr_tv_titleHeightAndWeight"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/attr_tv_titleTime"
+            app:layout_constraintTop_toBottomOf="@id/attr_secondSeparator" />
+
+        <TextView
+            android:id="@+id/attr_tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="12+"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/attr_tv_titleAge"
+            app:layout_constraintStart_toStartOf="@id/attr_tv_titleAge"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_titleAge" />
+
+        <TextView
+            android:id="@+id/attr_tv_titleHeightAndWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/dm_sans_regular"
+            android:text="Рост и вес:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/attr_tv_titleAge"
+            app:layout_constraintTop_toBottomOf="@id/attr_secondSeparator" />
+
+        <TextView
+            android:id="@+id/attr_tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text=">120 см"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/attr_tv_titleHeightAndWeight"
+            app:layout_constraintStart_toStartOf="@id/attr_tv_titleHeightAndWeight"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_titleHeightAndWeight" />
+
+        <TextView
+            android:id="@+id/attr_tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text=">35 кг"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/attr_tv_height"
+            app:layout_constraintStart_toStartOf="@id/attr_tv_height"
+            app:layout_constraintTop_toBottomOf="@id/attr_tv_height" />
+
+
+        <!--    Reviews    -->
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

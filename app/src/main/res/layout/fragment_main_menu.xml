@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mainmenu_tv_greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="Алексей, добрый день!"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+
+    <!--    Инициативы  -->
+    <ImageButton
+        android:id="@+id/mainmenu_btn_toEvents"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#00000000"
+        android:src="@drawable/rectangle_with_rounded_corners"
+        app:layout_constraintBottom_toTopOf="@+id/mainmenu_btn_toSales"
+        app:layout_constraintEnd_toStartOf="@+id/mainmenu_iv_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainmenu_tv_greetings"
+        app:layout_constraintVertical_weight="0.8"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_medium"
+        android:gravity="center"
+        android:text="Инициативы\nи\nголосования"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/mainmenu_btn_toEvents"
+        app:layout_constraintEnd_toEndOf="@id/mainmenu_btn_toEvents"
+        app:layout_constraintStart_toStartOf="@id/mainmenu_btn_toEvents"
+        app:layout_constraintTop_toTopOf="@id/mainmenu_btn_toEvents" />
+
+
+    <!--    Лого     -->
+    <ImageView
+        android:id="@+id/mainmenu_iv_logo"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/rectangle_with_rounded_corners"
+        android:padding="16dp"
+        android:src="@drawable/app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mainmenu_btn_toEvents"
+        app:layout_constraintTop_toTopOf="@+id/mainmenu_btn_toEvents" />
+
+
+    <!--    Новости     -->
+    <ImageButton
+        android:id="@+id/mainmenu_btn_toNews"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#00000000"
+        android:src="@drawable/rectangle_with_rounded_corners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mainmenu_btn_toEvents"
+        app:layout_constraintTop_toBottomOf="@id/mainmenu_iv_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_medium"
+        android:gravity="center"
+        android:text="Новости"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/mainmenu_btn_toNews"
+        app:layout_constraintEnd_toEndOf="@id/mainmenu_btn_toNews"
+        app:layout_constraintStart_toStartOf="@id/mainmenu_btn_toNews"
+        app:layout_constraintTop_toTopOf="@id/mainmenu_btn_toNews" />
+
+    <!--    Акции     -->
+    <ImageButton
+        android:id="@+id/mainmenu_btn_toSales"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#00000000"
+        android:src="@drawable/rectangle_with_rounded_corners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mainmenu_btn_toNews"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainmenu_btn_toEvents"
+        app:layout_constraintVertical_weight="0.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_medium"
+        android:gravity="center"
+        android:text="Акции"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/mainmenu_btn_toSales"
+        app:layout_constraintEnd_toEndOf="@id/mainmenu_btn_toSales"
+        app:layout_constraintStart_toStartOf="@id/mainmenu_btn_toSales"
+        app:layout_constraintTop_toTopOf="@id/mainmenu_btn_toSales" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
