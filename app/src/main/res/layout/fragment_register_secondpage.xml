@@ -6,79 +6,135 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/register_btn_back"
+        android:id="@+id/register2_btn_back"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:clickable="true"
         android:focusable="true"
         android:padding="8dp"
         android:src="@drawable/ic_baseline_arrow_back_ios_24"
-        app:layout_constraintBottom_toBottomOf="@id/register_tv_titleText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintBottom_toBottomOf="@id/register2_iv_logo"
+        app:layout_constraintEnd_toStartOf="@+id/register2_iv_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/register_tv_titleText" />
-
-    <TextView
-        android:id="@+id/register_tv_titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:background="@drawable/rectangle_with_rounded_corners_blue"
-        android:fontFamily="@font/franxurter_totally_medium"
-        android:gravity="center"
-        android:paddingHorizontal="24dp"
-        android:text="Анкета"
-        android:textColor="@android:color/white"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toTopOf="@+id/register2_iv_logo" />
 
     <ImageView
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:elevation="-1dp"
-        android:scaleX="1.09"
-        android:src="@drawable/rectangle_with_rounded_corners_light_blue"
-        app:layout_constraintBottom_toBottomOf="@id/register_tv_titleText"
-        app:layout_constraintEnd_toEndOf="@id/register_tv_titleText"
-        app:layout_constraintStart_toStartOf="@id/register_tv_titleText"
-        app:layout_constraintTop_toTopOf="@id/register_tv_titleText" />
+        android:id="@+id/register2_iv_logo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/register2_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/register2_tv_goOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/dm_sans_regular"
+        android:gravity="center"
+        android:text="Еще совсем чуть-чуть"
+        android:textColor="#606060"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register2_iv_logo" />
+
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/register_edt_nameLayout"
+        android:id="@+id/register2_edt_birthdayLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="65dp"
         android:layout_marginTop="32dp"
         android:hint="Дата рождения"
-        app:layout_constraintBottom_toTopOf="@+id/register_btn_continue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_tv_titleText"
-        app:layout_constraintVertical_bias="0.15">
+        app:layout_constraintTop_toBottomOf="@id/register2_tv_goOn">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/register_edt_name"
+            android:id="@+id/register2_edt_birthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/calibri"
+            android:fontFamily="@font/dm_sans_regular"
+            android:textSize="16sp"
             android:inputType="date" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register2_edt_marriageStatusLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        android:hint="Семейное положение"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register2_edt_birthdayLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/register2_edt_marriageStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_regular"
+            android:textSize="16sp"
+            android:inputType="textPersonName|textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/register2_tv_kidsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/calibri"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/dm_sans_regular"
         android:text="Выберите пол:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/register_edt_nameLayout"
-        app:layout_constraintTop_toBottomOf="@+id/register_edt_nameLayout" />
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/register2_edt_marriageStatusLayout"
+        app:layout_constraintTop_toBottomOf="@+id/register2_edt_marriageStatusLayout" />
+
+    <RadioGroup
+        android:id="@+id/register2_rg_kids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/register2_tv_kidsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/register2_tv_kidsLayout">
+
+        <RadioButton
+            android:id="@+id/register2_rb_hasKids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Да"
+            android:textColor="#303030"/>
+
+        <RadioButton
+            android:id="@+id/register2_rb_hasntKids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Нет"
+            android:textColor="#303030"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/register2_tv_sexLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/dm_sans_regular"
+        android:text="Выберите пол:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/register2_tv_kidsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/register2_rg_kids" />
 
     <RadioGroup
         android:id="@+id/register2_rg_sex"
@@ -86,76 +142,52 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintStart_toStartOf="@+id/register2_tv_sexLayout"
+        app:layout_constraintTop_toBottomOf="@+id/register2_tv_sexLayout">
 
         <RadioButton
             android:id="@+id/register2_rb_sexMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Мужской"/>
+            android:text="Мужской"
+            android:textColor="#303030"/>
 
         <RadioButton
             android:id="@+id/register2_rb_sexFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Женский"/>
+            android:text="Женский"
+            android:textColor="#303030"/>
 
         <RadioButton
             android:id="@+id/register2_rb_sexOther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Другой"/>
+            android:text="Другой"
+            android:textColor="#303030"/>
     </RadioGroup>
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/register_btn_continue"
+        android:id="@+id/register2_btn_continue"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="56dp"
-        android:fontFamily="@font/franxurter_totally_medium"
-        android:letterSpacing="0"
-        android:paddingHorizontal="24dp"
-        android:text="Продолжить"
+        android:layout_marginHorizontal="72dp"
+        android:background="@drawable/rectangle_with_rounded_corners"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="Регистрация"
+        android:textColor="#fff"
         android:textSize="26sp"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.9" />
 
-    <ImageView
-        android:id="@+id/register_imv_firstDot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:src="@drawable/register_round"
-        app:layout_constraintBottom_toBottomOf="@id/register_imv_secondDot"
-        app:layout_constraintEnd_toEndOf="@id/register_imv_secondDot" />
 
-    <ImageView
-        android:id="@+id/register_imv_secondDot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/register_round_filled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_btn_continue"
-        app:layout_constraintVertical_bias="0.7" />
-
-    <ImageView
-        android:id="@+id/register_imv_thirdDot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:src="@drawable/register_round"
-        app:layout_constraintBottom_toBottomOf="@id/register_imv_secondDot"
-        app:layout_constraintStart_toStartOf="@id/register_imv_secondDot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
