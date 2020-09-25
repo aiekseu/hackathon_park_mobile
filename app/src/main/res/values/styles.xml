@@ -7,4 +7,44 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">#0080CB</item>
+        <item name="boxCornerRadiusBottomEnd">25dp</item>
+        <item name="boxCornerRadiusBottomStart">25dp</item>
+        <item name="boxCornerRadiusTopEnd">25dp</item>
+        <item name="android:fontFamily">@font/franxurter_totally_medium</item>
+        <item name="android:typeface">@font/franxurter_totally_medium</item>
+        <item name="boxCornerRadiusTopStart">25dp</item>
+        <item name="boxStrokeColor">#0080CB</item>
+        <item name="errorEnabled">true</item>
+        <item name="materialThemeOverlay">@style/Overlay.TextInputEditText.OutlinedBox</item>
+    </style>
+
+    <style name="TextInputLayout.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="hintTextColor">#0080CB</item>
+        <item name="boxCornerRadiusBottomEnd">25dp</item>
+        <item name="boxCornerRadiusBottomStart">25dp</item>
+        <item name="boxCornerRadiusTopEnd">25dp</item>
+        <item name="android:fontFamily">@font/franxurter_totally_medium</item>
+        <item name="android:typeface">@font/franxurter_totally_medium</item>
+        <item name="boxCornerRadiusTopStart">25dp</item>
+        <item name="boxStrokeColor">#0080CB</item>
+        <item name="errorEnabled">true</item>
+        <item name="materialThemeOverlay">
+            @style/Overlay.TextInputEditText.OutlinedBox.ExposedDropdownMenu
+        </item>
+    </style>
+
+    <style name="Overlay.TextInputEditText.OutlinedBox" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorControlActivated">@color/colorCursor</item>
+    </style>
+
+    <style name="Overlay.TextInputEditText.OutlinedBox.ExposedDropdownMenu" parent="ThemeOverlay.MaterialComponents.AutoCompleteTextView.OutlinedBox">
+        <item name="colorControlActivated">@color/colorCursor</item>
+    </style>
+
+    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">@color/color_states_button</item>
+    </style>
+
 </resources>

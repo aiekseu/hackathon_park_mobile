@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/login_tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rectangle_with_rounded_corners_blue"
+        android:fontFamily="@font/franxurter_totally_medium"
+        android:paddingStart="40dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="8dp"
+        android:text="Добро пожаловать\nВ Нижний парк!"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_edt_emailLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        android:layout_marginTop="40dp"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_tv_welcome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_edt_email"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/calibri"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress|textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_edt_passwordLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        android:hint="Пароль"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_edt_emailLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri"
+            android:imeOptions="actionGo"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn_enter"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="72dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/franxurter_totally_medium"
+        android:text="Войти"
+        android:textSize="26sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_edt_passwordLayout" />
+
+    <TextView
+        android:id="@+id/login_btn_forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:focusable="true"
+        android:fontFamily="@font/calibri"
+        android:padding="8dp"
+        android:text="Забыли пароль?"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/login_btn_toRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_enter" />
+
+    <TextView
+        android:id="@+id/login_btn_toRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/calibri"
+        android:padding="8dp"
+        android:text="Регистрация"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/login_btn_forgotPassword"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_enter" />
+
+    <TextView
+        android:id="@+id/login_loginViaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/calibri"
+        android:text="Войти с помощью"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_forgotPassword"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <ImageView
+        android:id="@+id/login_btn_enterViaVK"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/vk_logo"
+        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaFB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+
+    <ImageView
+        android:id="@+id/login_btn_enterViaFB"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/fb_logo"
+        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaInst"
+        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaVK"
+        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+
+    <ImageView
+        android:id="@+id/login_btn_enterViaInst"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/inst_logo"
+        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaTwitter"
+        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaFB"
+        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+
+    <ImageView
+        android:id="@+id/login_btn_enterViaTwitter"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/twitter_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaInst"
+        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
