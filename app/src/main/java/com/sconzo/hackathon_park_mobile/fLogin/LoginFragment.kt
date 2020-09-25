@@ -4,7 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import androidx.core.widget.doAfterTextChanged
+import androidx.navigation.fragment.findNavController
 import com.sconzo.hackathon_park_mobile.R
+import com.sconzo.hackathon_park_mobile.setErrorListener
+import kotlinx.android.synthetic.main.fragment_login.*
 
 
 import moxy.MvpAppCompatFragment
@@ -16,38 +21,92 @@ class LoginFragment : MvpAppCompatFragment(), LoginView {
     @InjectPresenter
     lateinit var loginPresenter: LoginPresenter
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
-    }
+    ): View? = inflater.inflate(R.layout.fragment_login, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        login_btn_enter.isEnabled = false
+        login_btn_enter.setOnClickListener {
+            val email = login_edt_email.text.toString()
+            val password = login_edt_password.text.toString()
+            loginPresenter.loginUser(email, password)
+        }
+
+        login_btn_toRegister.setOnClickListener {
+            loginPresenter.toRegisterFragment()
+        }
+
+        login_edt_email.setErrorListener(login_edt_emailLayout)
+        login_edt_password.setErrorListener(login_edt_passwordLayout)
+
+        login_edt_email.doAfterTextChanged {
+            login_btn_enter.isEnabled =
+                !login_edt_email.text.isNullOrBlank() && !login_edt_password.text.isNullOrBlank()
+        }
+        login_edt_password.doAfterTextChanged {
+            login_btn_enter.isEnabled =
+                !login_edt_email.text.isNullOrBlank() && !login_edt_password.text.isNullOrBlank()
+        }
+
+        login_edt_password.setOnEditorActionListener { _, actionId, _ ->
+            return@setOnEditorActionListener if (actionId == EditorInfo.IME_ACTION_GO) {
+                //hideKeyboard()
+                if (login_btn_enter.isEnabled) {
+                    login_btn_enter.performClick()
+                }
+                true
+            } else {
+                false
+            }
+        }
+
     }
+
+
+    // Register Fragment Start
 
     override fun toRegisterFragment() {
-        TODO("Not yet implemented")
+        findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
     }
+
+
+    // Successfully Log In
 
     override fun finishLoginFragment() {
-        TODO("Not yet implemented")
+        //findNavController().navigate(R.id.action_loginFragment_to_cartFragment)
     }
 
+
+    // Incorrect Login or Password Show
+
     override fun showPasswordError(isError: Boolean) {
-        TODO("Not yet implemented")
+        if (isError) {
+            login_edt_emailLayout.error = " "
+            login_edt_passwordLayout.error = "Неверный логин или пароль"
+        } else {
+            login_edt_emailLayout.error = ""
+            login_edt_passwordLayout.error = ""
+        }
+    }
+
+
+    // User Inform
+
+    override fun showProgressBar(isVisible: Boolean) {
+        login_btn_toRegister.isClickable = !isVisible
+        if (isVisible) {
+            //login_btn_enter.startProgressCenter()
+        } else {
+            //login_btn_enter.doneProgress()
+        }
     }
 
     override fun showSnackbar(message: String) {
-        TODO("Not yet implemented")
-    }
-
-    override fun showProgressBar(isVisible: Boolean) {
-        TODO("Not yet implemented")
+        //view.showSnackbar(message)
     }
 
 
