@@ -28,16 +28,12 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //val defaultRegions = resources.getStringArray(R.array.regions_array)
-        //val defaultCities = resources.getStringArray(R.array.cities_array)
 
         register_btn_continue.setOnClickListener {
             registerPresenter.onRegister(
                 email = register_edt_email.text.toString(),
-                //region = register_edt_region.text.toString(),
-                //defaultRegions = defaultRegions,
-                //city = register_edt_city.text.toString(),
                 name = register_edt_name.text.toString(),
+                surname = register_edt_surname.text.toString(),
                 password = register_edt_password.text.toString(),
                 password2 = register_edt_repeatPassword.text.toString()
             )
@@ -80,9 +76,7 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
 //                false
 //            }
 //        }
-        register_btn_continue.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_registerTwoFragment)
-        }
+
 
     }
 
@@ -97,13 +91,6 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
         register_edt_emailLayout.error = message
     }
 
-    override fun setRegionError(message: String) {
-        //register_edt_regionLayout.error = message
-    }
-
-    override fun setCityError(message: String) {
-        //register_edt_cityLayout.error = message
-    }
 
     override fun setPasswordError(message: String) {
         register_edt_passwordLayout.error = message
@@ -119,6 +106,10 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
     override fun finishRegisterProcess() {
         showSnackbar("Регистрация завершена")
         //findNavController().navigate(R.id.action_registerFragment_to_cartFragment)
+    }
+
+    override fun navigateFurther() {
+        findNavController().navigate(R.id.action_registerFragment_to_registerTwoFragment)
     }
 
 

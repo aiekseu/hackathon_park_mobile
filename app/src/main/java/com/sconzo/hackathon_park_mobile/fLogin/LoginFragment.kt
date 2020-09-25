@@ -9,6 +9,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import com.sconzo.hackathon_park_mobile.R
 import com.sconzo.hackathon_park_mobile.setErrorListener
+import com.sconzo.hackathon_park_mobile.showToast
 import kotlinx.android.synthetic.main.fragment_login.*
 
 

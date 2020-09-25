@@ -6,6 +6,7 @@ import com.sconzo.hackathon_park_mobile.PatternsRegExp
 import com.sconzo.hackathon_park_mobile.makeLogError
 import com.sconzo.hackathon_park_mobile.model.Model
 import com.sconzo.hackathon_park_mobile.model.api.ServerRequest
+import com.sconzo.hackathon_park_mobile.model.data.ObjectData
 import com.sconzo.hackathon_park_mobile.model.data.User
 import com.sconzo.hackathon_park_mobile.model.preferences.ModelPreferences
 import com.sconzo.hackathon_park_mobile.throwError
@@ -15,54 +16,55 @@ import moxy.MvpPresenter
 
 @InjectViewState
 class RegisterPresenter: MvpPresenter<RegisterView>() {
-    private val disposables = CompositeDisposable()
-    val model = Model()
+
 
 
     // Registration Start
 
     fun onRegister(
         email: String,
-//        region: String,
-//        defaultRegions: Array<String>,
-//        city: String,
         name: String,
+        surname: String,
         password: String,
         password2: String
     ) {
         if (isDataValid(
                 email = email,
-//                region = region,
-//                defaultRegions = defaultRegions,
-//                city = city,
                 name = name,
                 password = password,
                 password2 = password2
             )
         ) {
-            inciteProgressBar(true)
-            val user =
-                User(email = email, name = name, password = password)
-            val disposableRegisterUser = model.registerUser(ServerRequest.registerUser(user))
-                .subscribe(
-                    { response ->
-                        inciteProgressBar(false)
-                        val pref = model.getPreferences()
-                        if (response.result == null || response.result == false) {
-                            makeLogError(response.error?.message ?: Errors.ERROR_SERVER)
-                            viewState.showSnackbar(response.error?.message ?: Errors.ERROR_SERVER)
-                        } else if (pref == null) {
-                            makeLogError(Errors.ERROR_APP)
-                            viewState.showSnackbar(Errors.ERROR_APP)
-                        } else {
-                            finishRegisterSuccess(pref, user)
-                        }
-                    },
-                    {
-                        throwError(it)
-                        viewState.showSnackbar(Errors.ERROR_APP)
-                    })
-            disposables.add(disposableRegisterUser)
+            ObjectData.name = name
+            ObjectData.surname = surname
+            ObjectData.email = email
+            ObjectData.password = password
+
+            viewState.navigateFurther()
+
+//            inciteProgressBar(true)
+//            val user =
+//                User(email = email, name = name, surname = surname, password = password)
+//            val disposableRegisterUser = model.registerUser(ServerRequest.registerUser(user))
+//                .subscribe(
+//                    { response ->
+//                        inciteProgressBar(false)
+//                        val pref = model.getPreferences()
+//                        if (response.result == null || response.result == false) {
+//                            makeLogError(response.error?.message ?: Errors.ERROR_SERVER)
+//                            viewState.showSnackbar(response.error?.message ?: Errors.ERROR_SERVER)
+//                        } else if (pref == null) {
+//                            makeLogError(Errors.ERROR_APP)
+//                            viewState.showSnackbar(Errors.ERROR_APP)
+//                        } else {
+//                            finishRegisterSuccess(pref, user)
+//                        }
+//                    },
+//                    {
+//                        throwError(it)
+//                        viewState.showSnackbar(Errors.ERROR_APP)
+//                    })
+//            disposables.add(disposableRegisterUser)
         }
     }
 
@@ -92,13 +94,6 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
         // Name Validation
         val isNameValid = isNameValid(name)
 
-        // Region Validation
-        //val isRegionValid = isRegionValid(region, defaultRegions)
-        val isRegionValid = true
-
-        // City Validation
-        //val isCityValid = isCityValid(city)
-        val isCityValid = true
 
         // Password Validation
         val isPasswordValid = isPasswordValid(password)
@@ -106,7 +101,7 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
         // Password2 Validation
         val isRepeatPasswordValid = isPassword2Valid(password, password2)
 
-        return isEmailValid && isNameValid && isRegionValid && isCityValid && isPasswordValid && isRepeatPasswordValid
+        return isEmailValid && isNameValid &&  isPasswordValid && isRepeatPasswordValid
     }
 
 
@@ -136,29 +131,6 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
         return false
     }
 
-    fun isRegionValid(region: String, defaultRegions: Array<String>): Boolean {
-        when {
-            TextUtils.isEmpty(region) -> viewState.setRegionError("Выберите регион")
-            !defaultRegions.contains(region) -> viewState.setRegionError("Выберите регион из списка")
-            else -> {
-                viewState.setRegionError("")
-                return true
-            }
-        }
-        return false
-    }
-
-    fun isCityValid(city: String): Boolean {
-        when {
-            TextUtils.isEmpty(city) -> viewState.setCityError("Введите город")
-            else -> {
-                viewState.setCityError("")
-                return true
-            }
-        }
-        return false
-
-    }
 
     fun isPasswordValid(password: String): Boolean {
         when {
@@ -212,8 +184,8 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
     }
 
 
-    override fun onDestroy() {
-        super.onDestroy()
-        disposables.clear()
-    }
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        disposables.clear()
+//    }
 }

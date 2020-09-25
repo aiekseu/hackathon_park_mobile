@@ -14,11 +14,6 @@ interface RegisterView: MvpView {
     @AddToEndSingle
     fun setEmailError(message: String)
 
-    @AddToEndSingle
-    fun setRegionError(message: String)
-
-    @AddToEndSingle
-    fun setCityError(message: String)
 
     @AddToEndSingle
     fun setPasswordError(message: String)
@@ -40,4 +35,7 @@ interface RegisterView: MvpView {
 
     @OneExecution
     fun finishRegisterProcess()
+
+    @OneExecution
+    fun navigateFurther()
 }

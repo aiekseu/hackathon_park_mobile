@@ -5,6 +5,7 @@ import androidx.navigation.findNavController
 import com.sconzo.hackathon_park_mobile.R
 import com.sconzo.hackathon_park_mobile.isInternetAvailable
 import com.sconzo.hackathon_park_mobile.showSnackbar
+import com.sconzo.hackathon_park_mobile.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
@@ -12,8 +13,6 @@ import moxy.presenter.InjectPresenter
 class MainActivity : MvpAppCompatActivity(), MainView {
     @InjectPresenter
     lateinit var mainPresenter: MainPresenter
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,9 +51,6 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 
 
     companion object {
-
-
-
         var internetListener: () -> Boolean = { false }
 
         fun isInternetActive(): Boolean = internetListener()

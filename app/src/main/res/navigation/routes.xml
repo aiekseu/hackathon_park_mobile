@@ -33,15 +33,7 @@
         android:name="com.sconzo.hackathon_park_mobile.fRegister2.RegisterTwoFragment"
         android:label="RegisterTwoFragment" >
         <action
-            android:id="@+id/action_registerTwoFragment_to_registerThreeFragment"
-            app:destination="@id/registerThreeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/registerThreeFragment"
-        android:name="com.sconzo.hackathon_park_mobile.fRegister3.RegisterThreeFragment"
-        android:label="RegisterThreeFragment" >
-        <action
-            android:id="@+id/action_registerThreeFragment_to_loginFragment"
+            android:id="@+id/action_registerTwoFragment_to_loginFragment"
             app:destination="@id/loginFragment"
             app:popUpTo="@id/routes" />
     </fragment>

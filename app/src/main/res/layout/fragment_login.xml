@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".fLogin.LoginFragment">
 
     <TextView
         android:id="@+id/login_tv_welcome"
@@ -68,7 +69,7 @@
         android:background="@drawable/rectangle_with_rounded_corners"
         android:fontFamily="@font/dm_sans_medium"
         android:text="Войти"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:textSize="26sp"
         app:cornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
