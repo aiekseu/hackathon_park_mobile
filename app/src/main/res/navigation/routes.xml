@@ -37,4 +37,13 @@
             app:destination="@id/loginFragment"
             app:popUpTo="@id/routes" />
     </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fMainMenu.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" />
+    <action
+        android:id="@+id/action_global_mainMenuFragment"
+        app:destination="@id/mainMenuFragment"
+        app:popUpTo="@id/routes" />
 </navigation>

@@ -1,7 +1,9 @@
 package com.sconzo.hackathon_park_mobile.aMain
 
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sconzo.hackathon_park_mobile.R
 import com.sconzo.hackathon_park_mobile.isInternetAvailable
 import com.sconzo.hackathon_park_mobile.showSnackbar
@@ -15,10 +17,13 @@ class MainActivity : MvpAppCompatActivity(), MainView {
     lateinit var mainPresenter: MainPresenter
 
 
+    lateinit var bottomMenu: BottomNavigationView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        bottomMenu = bottom_navigation
 
         internetListener = { isInternetAvailable() }
     }
@@ -37,6 +42,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 //    }
 
     override fun toLoginFragment() {
+        bottom_navigation.visibility = View.GONE
         findNavController(R.id.main_navigation).navigate(R.id.action_global_loginFragment)
     }
 
@@ -46,6 +52,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
     override fun showSnackbar(message: String) {
         main_navigation.showSnackbar(message)
     }
+
 
 
 

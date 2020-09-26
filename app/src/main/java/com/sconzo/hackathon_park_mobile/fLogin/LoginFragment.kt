@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sconzo.hackathon_park_mobile.R
 import com.sconzo.hackathon_park_mobile.setErrorListener
 import com.sconzo.hackathon_park_mobile.showToast
@@ -30,11 +31,12 @@ class LoginFragment : MvpAppCompatFragment(), LoginView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        login_btn_enter.isEnabled = false
+        //login_btn_enter.isEnabled = false
         login_btn_enter.setOnClickListener {
             val email = login_edt_email.text.toString()
             val password = login_edt_password.text.toString()
-            loginPresenter.loginUser(email, password)
+            //loginPresenter.loginUser(email, password)
+            finishLoginFragment()
         }
 
         login_btn_toRegister.setOnClickListener {
@@ -78,7 +80,8 @@ class LoginFragment : MvpAppCompatFragment(), LoginView {
     // Successfully Log In
 
     override fun finishLoginFragment() {
-        //findNavController().navigate(R.id.action_loginFragment_to_cartFragment)
+        activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)?.visibility = View.VISIBLE
+        findNavController().navigate(R.id.action_global_mainMenuFragment)
     }
 
 
