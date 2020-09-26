@@ -28,7 +28,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
            when (item.itemId) {
                R.id.page_news -> findNavController(R.id.main_navigation).navigate(R.id.action_global_mainMenuFragment)
                R.id.page_map -> findNavController(R.id.main_navigation).navigate(R.id.action_global_mapFragment)
-               R.id.page_buildings -> findNavController(R.id.main_navigation).navigate(R.id.action_global_buyFragment)
+               R.id.page_buildings -> findNavController(R.id.main_navigation).navigate(R.id.action_global_attractionsFragment)
                R.id.page_profile -> findNavController(R.id.main_navigation).navigate(R.id.action_global_profileFragment)
            }
            true

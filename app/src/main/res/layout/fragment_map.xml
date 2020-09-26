@@ -9,7 +9,7 @@
 
 
     <ImageButton
-        android:id="@+id/news_btn_back"
+        android:id="@+id/map_btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/news_tv_title"
+        android:id="@+id/map_tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,16 +30,16 @@
         android:text="Карта"
         android:textColor="@color/violetExtraDark"
         android:textSize="42sp"
-        app:layout_constraintStart_toStartOf="@+id/news_btn_back"
-        app:layout_constraintTop_toBottomOf="@+id/news_btn_back" />
+        app:layout_constraintStart_toStartOf="@+id/map_btn_back"
+        app:layout_constraintTop_toBottomOf="@+id/map_btn_back" />
 
     <View
-        android:id="@+id/news_firstSeparator"
+        android:id="@+id/map_firstSeparator"
         android:layout_width="wrap_content"
         android:layout_height="0.5dp"
         android:background="@color/violetDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/news_tv_title" />
+        app:layout_constraintTop_toBottomOf="@id/map_tv_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
