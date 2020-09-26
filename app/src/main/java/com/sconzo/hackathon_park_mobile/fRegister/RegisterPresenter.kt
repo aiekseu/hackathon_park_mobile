@@ -101,7 +101,8 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
         // Password2 Validation
         val isRepeatPasswordValid = isPassword2Valid(password, password2)
 
-        return isEmailValid && isNameValid &&  isPasswordValid && isRepeatPasswordValid
+        //return isEmailValid && isNameValid &&  isPasswordValid && isRepeatPasswordValid
+        return true
     }
 
 
