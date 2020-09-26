@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".fPromos.PromosFragment">
 
     <ImageButton
         android:id="@+id/promos_btn_back"
@@ -39,5 +40,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/promos_tv_title" />
+
+    <include
+        android:id="@+id/row_promo_1"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        layout="@layout/row_promo"
+        app:layout_constraintTop_toBottomOf="@+id/promos_firstSeparator"
+        />
+    <include
+        android:id="@+id/row_promo_2"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        layout="@layout/row_promo"
+        app:layout_constraintTop_toBottomOf="@+id/row_promo_1"
+        />
+    <include
+        android:id="@+id/row_promo_3"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        layout="@layout/row_promo"
+        app:layout_constraintTop_toBottomOf="@+id/row_promo_2"
+        />
+    <include
+        android:id="@+id/row_promo_4"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        layout="@layout/row_promo"
+        app:layout_constraintTop_toBottomOf="@+id/row_promo_3"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".fNews.NewsFragment">
 
     <ImageButton
         android:id="@+id/news_btn_back"
@@ -40,4 +41,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/news_tv_title" />
 
+
+
+    <include
+        android:id="@+id/container_header_lyt1"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        layout="@layout/row_news"
+        app:layout_constraintTop_toBottomOf="@+id/news_firstSeparator"
+    />
+    <include
+        android:id="@+id/container_header_lyt2"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        layout="@layout/row_news"
+        app:layout_constraintTop_toBottomOf="@+id/container_header_lyt1"
+        />
+    <include
+        android:id="@+id/container_header_lyt3"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        layout="@layout/row_news"
+        app:layout_constraintTop_toBottomOf="@+id/container_header_lyt2"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

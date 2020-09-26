@@ -41,7 +41,20 @@
         android:id="@+id/mainMenuFragment"
         android:name="com.sconzo.hackathon_park_mobile.fMainMenu.MainMenuFragment"
         android:label="fragment_main_menu"
-        tools:layout="@layout/fragment_main_menu" />
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenuFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:popUpTo="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_promosFragment"
+            app:destination="@id/promosFragment"
+            app:popUpTo="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_initiativesFragment"
+            app:destination="@id/initiativesFragment"
+            app:popUpTo="@id/mainMenuFragment" />
+    </fragment>
     <action
         android:id="@+id/action_global_mainMenuFragment"
         app:destination="@id/mainMenuFragment"
@@ -82,4 +95,19 @@
         android:id="@+id/action_global_mapFragment"
         app:destination="@id/mapFragment"
         app:popUpTo="@id/routes" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fNews.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/promosFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fPromos.PromosFragment"
+        android:label="fragment_promos"
+        tools:layout="@layout/fragment_promos" />
+    <fragment
+        android:id="@+id/initiativesFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fInitiatives.InitiativesFragment"
+        android:label="fragment_initiatives"
+        tools:layout="@layout/fragment_initiatives" />
 </navigation>
