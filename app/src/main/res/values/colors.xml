@@ -6,7 +6,9 @@
     <color name="colorWhite">#03DAC5</color>
 
     <color name='violetLight'>#D8D1E7</color>
+    <color name="violetMedium">#AD9DCC</color>
     <color name='violetDark'>#845E92</color>
+    <color name="violetExtraDark">#473766</color>
 
     <color name="colorCursor">#0080CB</color>
 
