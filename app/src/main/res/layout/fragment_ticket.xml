@@ -64,7 +64,7 @@
             android:background="@color/violetLight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ticket_tv_surname" />
+            app:layout_constraintTop_toBottomOf="@+id/ticket_tv_surname" />
 
         <!--    QR and Barcode  -->
 
