@@ -57,7 +57,7 @@ class MainPresenter: MvpPresenter<MainView>() {
         pref.setIsLoggedIn(true)
         pref.setUser(userServer)
         makeLogDebug("User from SharedPreferences")
-        //viewState.toCartFragment()
+        viewState.toMainMenuFragment()
     }
 
 
@@ -76,13 +76,16 @@ class MainPresenter: MvpPresenter<MainView>() {
         viewState.toLoginFragment()
     }
 
-    fun toLogin(){
-        viewState.toLoginFragment()
-    }
-
 
     override fun onDestroy() {
         super.onDestroy()
         disposables.clear()
+    }
+
+
+
+    // TODO: функция для дебага
+    fun toLogin(){
+        viewState.toLoginFragment()
     }
 }

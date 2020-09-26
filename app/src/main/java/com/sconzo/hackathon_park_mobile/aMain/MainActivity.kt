@@ -1,8 +1,10 @@
 package com.sconzo.hackathon_park_mobile.aMain
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sconzo.hackathon_park_mobile.R
 import com.sconzo.hackathon_park_mobile.isInternetAvailable
@@ -16,45 +18,51 @@ class MainActivity : MvpAppCompatActivity(), MainView {
     @InjectPresenter
     lateinit var mainPresenter: MainPresenter
 
-
-    lateinit var bottomMenu: BottomNavigationView
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        bottomMenu = bottom_navigation
 
         internetListener = { isInternetAvailable() }
+
+       bottom_navigation.setOnNavigationItemSelectedListener { item ->
+           when (item.itemId) {
+               R.id.page_news -> findNavController(R.id.main_navigation).navigate(R.id.action_global_mainMenuFragment)
+               R.id.page_map -> findNavController(R.id.main_navigation).navigate(R.id.action_global_loginFragment)
+               R.id.page_buildings -> findNavController(R.id.main_navigation).navigate(R.id.action_global_mainMenuFragment)
+               R.id.page_profile -> findNavController(R.id.main_navigation).navigate(R.id.action_global_loginFragment)
+           }
+           true
+       }
+
     }
 
-    override fun onResume() {
-        super.onResume()
-        mainPresenter.toLogin()
-    }
 
-
-
-    // Cart/Login Fragments Move
-
-//    override fun toCartFragment() {
-//        findNavController(R.id.main_navigation).navigate(R.id.action_global_cartFragment)
-//    }
-
+    // Navigation Move
     override fun toLoginFragment() {
         bottom_navigation.visibility = View.GONE
         findNavController(R.id.main_navigation).navigate(R.id.action_global_loginFragment)
     }
 
+    override fun toMainMenuFragment() {
+        bottom_navigation.visibility = View.VISIBLE
+        findNavController(R.id.main_navigation).navigate(R.id.action_global_mainMenuFragment)
+    }
+
+
 
     // User Notify
-
     override fun showSnackbar(message: String) {
         main_navigation.showSnackbar(message)
     }
 
 
 
+    override fun onResume() {
+        super.onResume()
+
+        // TODO: Удалить при подключении сервера
+        mainPresenter.toLogin()
+    }
 
 
     companion object {

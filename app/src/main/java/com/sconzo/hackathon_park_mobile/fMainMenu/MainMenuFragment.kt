@@ -6,10 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sconzo.hackathon_park_mobile.R
+import moxy.MvpAppCompatFragment
+import moxy.presenter.InjectPresenter
 
 
-class MainMenuFragment : Fragment() {
+class MainMenuFragment : MvpAppCompatFragment(), MainMenuView {
 
+    @InjectPresenter
+    lateinit var mainMenuPresenter: MainMenuPresenter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

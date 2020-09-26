@@ -44,6 +44,9 @@ class RegisterTwoPresenter: MvpPresenter<RegisterTwoView>() {
                     throwError(it)
                     viewState.showSnackbar(Errors.ERROR_APP)
                 })
+
+        val pref = model.getPreferences()
+        finishRegisterSuccess(pref, user)
         disposables.add(disposableRegisterUser)
     }
 

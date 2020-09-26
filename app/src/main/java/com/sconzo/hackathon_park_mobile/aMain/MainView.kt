@@ -9,5 +9,8 @@ interface MainView: MvpView {
     fun toLoginFragment()
 
     @OneExecution
+    fun toMainMenuFragment()
+
+    @OneExecution
     fun showSnackbar(message: String)
 }

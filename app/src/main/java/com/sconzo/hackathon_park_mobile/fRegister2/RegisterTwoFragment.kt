@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sconzo.hackathon_park_mobile.R
 import com.sconzo.hackathon_park_mobile.hideKeyboard
 import com.sconzo.hackathon_park_mobile.showSnackbar
@@ -74,6 +75,8 @@ class RegisterTwoFragment : MvpAppCompatFragment(), RegisterTwoView {
     }
 
     override fun finishRegisterProcess() {
+        activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)?.visibility = View.VISIBLE
+        findNavController().navigate(R.id.action_global_mainMenuFragment)
         showSnackbar("Регистрация завершена")
     }
 

@@ -37,7 +37,7 @@ class ModelPreferences(context: Context) {
     }
 
     companion object {
-        const val PREF_APP = "outOfTurn_preferences"
+        const val PREF_APP = "hackathon_part_mobile_preferences"
         const val PREF_isLoggedIn = "preferences_isLoggedIn"
         const val PREF_userJson = "preferences_userJson"
     }

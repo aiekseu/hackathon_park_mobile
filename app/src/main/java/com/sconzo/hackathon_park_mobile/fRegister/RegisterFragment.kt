@@ -67,15 +67,15 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
             )
         }
 
-//        register_edt_repeatPassword.setOnEditorActionListener { _, actionId, _ ->
-//            return@setOnEditorActionListener if (actionId == EditorInfo.IME_ACTION_GO) {
-//                hideKeyboard()
-//                register_btn_continue.performClick()
-//                true
-//            } else {
-//                false
-//            }
-//        }
+        register_edt_repeatPassword.setOnEditorActionListener { _, actionId, _ ->
+            return@setOnEditorActionListener if (actionId == EditorInfo.IME_ACTION_GO) {
+                hideKeyboard()
+                register_btn_continue.performClick()
+                true
+            } else {
+                false
+            }
+        }
 
 
     }

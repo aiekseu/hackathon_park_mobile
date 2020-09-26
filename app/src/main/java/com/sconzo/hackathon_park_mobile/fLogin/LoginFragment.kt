@@ -8,9 +8,7 @@ import android.view.inputmethod.EditorInfo
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.sconzo.hackathon_park_mobile.R
-import com.sconzo.hackathon_park_mobile.setErrorListener
-import com.sconzo.hackathon_park_mobile.showToast
+import com.sconzo.hackathon_park_mobile.*
 import kotlinx.android.synthetic.main.fragment_login.*
 
 
@@ -31,10 +29,14 @@ class LoginFragment : MvpAppCompatFragment(), LoginView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // TODO: при подключении сервера убрать знак комментария
         //login_btn_enter.isEnabled = false
+
         login_btn_enter.setOnClickListener {
             val email = login_edt_email.text.toString()
             val password = login_edt_password.text.toString()
+
+            // TODO: при подключении сервера убрать знак комментария
             //loginPresenter.loginUser(email, password)
             finishLoginFragment()
         }
@@ -57,7 +59,7 @@ class LoginFragment : MvpAppCompatFragment(), LoginView {
 
         login_edt_password.setOnEditorActionListener { _, actionId, _ ->
             return@setOnEditorActionListener if (actionId == EditorInfo.IME_ACTION_GO) {
-                //hideKeyboard()
+                hideKeyboard()
                 if (login_btn_enter.isEnabled) {
                     login_btn_enter.performClick()
                 }
@@ -110,7 +112,7 @@ class LoginFragment : MvpAppCompatFragment(), LoginView {
     }
 
     override fun showSnackbar(message: String) {
-        //view.showSnackbar(message)
+        view.showSnackbar(message)
     }
 
 

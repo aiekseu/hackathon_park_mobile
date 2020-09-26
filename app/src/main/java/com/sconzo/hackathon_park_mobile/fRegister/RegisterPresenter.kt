@@ -17,7 +17,8 @@ import moxy.MvpPresenter
 @InjectViewState
 class RegisterPresenter: MvpPresenter<RegisterView>() {
 
-
+    val model = Model()
+    private val disposables = CompositeDisposable()
 
     // Registration Start
 
@@ -76,6 +77,7 @@ class RegisterPresenter: MvpPresenter<RegisterView>() {
         pref.setUser(user)
         viewState.finishRegisterProcess()
     }
+
 
 
     // Data Validate
