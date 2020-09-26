@@ -27,9 +27,9 @@ class MainActivity : MvpAppCompatActivity(), MainView {
        bottom_navigation.setOnNavigationItemSelectedListener { item ->
            when (item.itemId) {
                R.id.page_news -> findNavController(R.id.main_navigation).navigate(R.id.action_global_mainMenuFragment)
-               R.id.page_map -> findNavController(R.id.main_navigation).navigate(R.id.action_global_loginFragment)
+               R.id.page_map -> findNavController(R.id.main_navigation).navigate(R.id.action_global_mapFragment)
                R.id.page_buildings -> findNavController(R.id.main_navigation).navigate(R.id.action_global_buyFragment)
-               R.id.page_profile -> findNavController(R.id.main_navigation).navigate(R.id.action_global_loginFragment)
+               R.id.page_profile -> findNavController(R.id.main_navigation).navigate(R.id.action_global_profileFragment)
            }
            true
        }

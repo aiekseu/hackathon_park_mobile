@@ -24,7 +24,7 @@
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         app:backgroundTint="#473766"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         app:menu="@menu/bottom_navigation_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         />

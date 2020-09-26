@@ -22,6 +22,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_edt_emailLayout"
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="65dp"
@@ -105,7 +106,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_btn_enterViaVK"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_forgotPassword"
         app:layout_constraintVertical_bias="0.4" />
 
     <TextView
@@ -124,67 +125,67 @@
         app:layout_constraintStart_toEndOf="@+id/login_tv_toRegister"
         app:layout_constraintTop_toTopOf="@+id/login_tv_toRegister" />
 
-    <TextView
-        android:id="@+id/login_loginViaText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/calibri"
-        android:text="Войти с помощью"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_btn_forgotPassword"
-        app:layout_constraintVertical_bias="0.18" />
+<!--    <TextView-->
+<!--        android:id="@+id/login_loginViaText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/calibri"-->
+<!--        android:text="Войти с помощью"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/login_btn_forgotPassword"-->
+<!--        app:layout_constraintVertical_bias="0.18" />-->
 
-    <ImageView
-        android:id="@+id/login_btn_enterViaVK"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/vk_logo"
-        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaFB"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+<!--    <ImageView-->
+<!--        android:id="@+id/login_btn_enterViaVK"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="48dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:src="@drawable/vk_logo"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaFB"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />-->
 
-    <ImageView
-        android:id="@+id/login_btn_enterViaFB"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/fb_logo"
-        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaInst"
-        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaVK"
-        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+<!--    <ImageView-->
+<!--        android:id="@+id/login_btn_enterViaFB"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:src="@drawable/fb_logo"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaInst"-->
+<!--        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaVK"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />-->
 
-    <ImageView
-        android:id="@+id/login_btn_enterViaInst"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/inst_logo"
-        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaTwitter"
-        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaFB"
-        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+<!--    <ImageView-->
+<!--        android:id="@+id/login_btn_enterViaInst"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:src="@drawable/inst_logo"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/login_btn_enterViaTwitter"-->
+<!--        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaFB"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />-->
 
-    <ImageView
-        android:id="@+id/login_btn_enterViaTwitter"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="48dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/twitter_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaInst"
-        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />
+<!--    <ImageView-->
+<!--        android:id="@+id/login_btn_enterViaTwitter"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginEnd="48dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:src="@drawable/twitter_logo"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@id/login_btn_enterViaInst"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/login_loginViaText" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

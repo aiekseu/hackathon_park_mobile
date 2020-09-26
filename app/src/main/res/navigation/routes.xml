@@ -64,4 +64,22 @@
         android:name="com.sconzo.hackathon_park_mobile.fTicket.TicketFragment"
         android:label="fragment_ticket"
         tools:layout="@layout/fragment_ticket" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fProfile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profileFragment"
+        app:popUpTo="@id/routes" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fMap.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <action
+        android:id="@+id/action_global_mapFragment"
+        app:destination="@id/mapFragment"
+        app:popUpTo="@id/routes" />
 </navigation>
