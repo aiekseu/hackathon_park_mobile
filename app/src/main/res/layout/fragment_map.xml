@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/dm_sans_medium"
-        android:text="Аттракционы"
+        android:text="Карта"
         android:textColor="@color/violetExtraDark"
         android:textSize="42sp"
         app:layout_constraintStart_toStartOf="@+id/news_btn_back"
@@ -42,12 +42,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/news_tv_title" />
 
-
-    <include
-        android:id="@+id/row_attraction"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        layout="@layout/row_attraction"
-        app:layout_constraintTop_toBottomOf="@+id/news_firstSeparator"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>

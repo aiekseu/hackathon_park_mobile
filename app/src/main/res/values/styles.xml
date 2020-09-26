@@ -48,11 +48,11 @@
     </style>
 
     <style name="Overlay.TextInputEditText.OutlinedBox" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
-        <item name="colorControlActivated">@color/colorCursor</item>
+        <item name="colorControlActivated">@color/violetMedium</item>
     </style>
 
     <style name="Overlay.TextInputEditText.OutlinedBox.ExposedDropdownMenu" parent="ThemeOverlay.MaterialComponents.AutoCompleteTextView.OutlinedBox">
-        <item name="colorControlActivated">@color/colorCursor</item>
+        <item name="colorControlActivated">@color/violetMedium</item>
     </style>
 
 </resources>

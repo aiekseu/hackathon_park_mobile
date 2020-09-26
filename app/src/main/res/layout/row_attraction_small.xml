@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    app:cardBackgroundColor="#0000"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="170dp">
+
+        <ImageView
+            android:id="@+id/smallAttract_imv_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/wedding_carousel"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <TextView
+            android:id="@+id/smallAttract_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="Свадебная карусель"
+            android:textSize="16sp"
+            android:textColor="@color/violetExtraDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/smallAttract_imv_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/smallAttract_tv_geo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Нижний парк, г. Липецк"
+            android:textColor="#444"
+            android:fontFamily="@font/dm_sans_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/smallAttract_imv_photo"
+            app:layout_constraintTop_toBottomOf="@id/smallAttract_tv_title" />
+
+        <TextView
+            android:id="@+id/smallAttract_tv_textQueueTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Среднее время\nожидания в очереди:"
+            android:gravity="center"
+            android:fontFamily="@font/dm_sans_regular"
+            android:textColor="#272727"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/smallAttract_tv_geo" />
+
+        <TextView
+            android:id="@+id/smallAttract_tv_queueTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 мин."
+            android:fontFamily="@font/dm_sans_medium"
+            android:textSize="16sp"
+            android:textColor="#222"
+            app:layout_constraintEnd_toEndOf="@+id/smallAttract_tv_textQueueTime"
+            app:layout_constraintStart_toStartOf="@+id/smallAttract_tv_textQueueTime"
+            app:layout_constraintTop_toBottomOf="@+id/smallAttract_tv_textQueueTime" />
+
+        <View
+            android:id="@+id/smallAttract_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/violetDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
