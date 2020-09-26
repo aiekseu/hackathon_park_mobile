@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
 import com.sconzo.hackathon_park_mobile.R
 import com.sconzo.hackathon_park_mobile.hideKeyboard
@@ -36,6 +37,9 @@ class RegisterTwoFragment : MvpAppCompatFragment(), RegisterTwoView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val marriageStatuses = resources.getStringArray(R.array.marriageStatuses)
+
         register2_btn_back.setOnClickListener {
             hideKeyboard()
             findNavController().popBackStack()
@@ -56,6 +60,14 @@ class RegisterTwoFragment : MvpAppCompatFragment(), RegisterTwoView {
 
             registerTwoPresenter.onRegister(birthday, hasKids, sex)
         }
+
+        register2_edt_marriageStatus.setAdapter(
+            ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_list_item_1,
+                marriageStatuses
+            )
+        )
     }
 
 

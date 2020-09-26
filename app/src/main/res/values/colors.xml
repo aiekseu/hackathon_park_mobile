@@ -5,6 +5,9 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorWhite">#03DAC5</color>
 
+    <color name='violetLight'>#D8D1E7</color>
+    <color name='violetDark'>#845E92</color>
+
     <color name="colorCursor">#0080CB</color>
 
     <color name="colorPrimaryLight">#C8E6C9</color>

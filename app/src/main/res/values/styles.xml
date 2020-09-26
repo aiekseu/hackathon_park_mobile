@@ -19,7 +19,7 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="hintTextColor">#0080CB</item>
+        <item name="hintTextColor">#303030</item>
         <item name="boxCornerRadiusBottomEnd">25dp</item>
         <item name="boxCornerRadiusBottomStart">25dp</item>
         <item name="boxCornerRadiusTopEnd">25dp</item>
@@ -32,14 +32,15 @@
     </style>
 
     <style name="TextInputLayout.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-        <item name="hintTextColor">#0080CB</item>
+        <item name="hintTextColor">#303030</item>
+        <item name="endIconTint">#845E92</item>
         <item name="boxCornerRadiusBottomEnd">25dp</item>
         <item name="boxCornerRadiusBottomStart">25dp</item>
         <item name="boxCornerRadiusTopEnd">25dp</item>
         <item name="android:fontFamily">@font/franxurter_totally_medium</item>
         <item name="android:typeface">@font/franxurter_totally_medium</item>
         <item name="boxCornerRadiusTopStart">25dp</item>
-        <item name="boxStrokeColor">#303030</item>
+        <item name="boxStrokeColor">#D8D1E7</item>
         <item name="errorEnabled">true</item>
         <item name="materialThemeOverlay">
             @style/Overlay.TextInputEditText.OutlinedBox.ExposedDropdownMenu
