@@ -14,7 +14,7 @@
         android:layout_marginStart="24dp"
         android:fontFamily="@font/dm_sans_medium"
         android:text="Личный кабинет"
-        android:textColor="#0c0c0c"
+        android:textColor="#473766"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,18 +27,175 @@
         android:layout_marginEnd="24dp"
         android:background="#0000"
         android:src="@drawable/ic_baseline_edit_24"
-        android:tint="#000"
+        android:tint="#473766"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:text="Петр Бычков"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/login_edt_emailLayout"-->
+
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="65dp"-->
+<!--        android:layout_marginTop="104dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/textView2">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/login_edt_email"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/calibri"-->
+<!--            android:text="Петр Бычков"-->
+<!--            android:inputType="textEmailAddress|textCapSentences" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
     <TextView
+        android:id="@+id/profile_tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/dm_sans_medium"
         android:text="Петр Бычков"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#2C2948"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+    <View
+        android:id="@+id/profile_separator_1"
+        android:layout_width="320dp"
+        android:layout_height="1.5dp"
+        android:background="@color/violetDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_name" />
+
+    <TextView
+        android:id="@+id/profile_tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="petrbychkov@gmail.com"
+        android:textColor="#2C2948"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/profile_separator_1" />
+
+    <View
+        android:id="@+id/profile_separator_2"
+        android:layout_width="320dp"
+        android:layout_height="1.5dp"
+        android:background="@color/violetDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_email" />
+
+    <TextView
+    android:id="@+id/profile_tv_age"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="20dp"
+    android:fontFamily="@font/dm_sans_medium"
+    android:text="20 лет"
+    android:textColor="#2C2948"
+    android:textSize="22sp"
+    app:layout_constraintStart_toStartOf="@+id/textView2"
+    app:layout_constraintTop_toBottomOf="@+id/profile_separator_2" />
+
+    <View
+        android:id="@+id/profile_separator_3"
+        android:layout_width="320dp"
+        android:layout_height="1.5dp"
+        android:background="@color/violetDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_age" />
+
+
+    <TextView
+        android:id="@+id/profile_tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="Женат"
+        android:textColor="#2C2948"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/profile_separator_3" />
+
+    <View
+        android:id="@+id/profile_separator_4"
+        android:layout_width="320dp"
+        android:layout_height="1.5dp"
+        android:background="@color/violetDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_status" />
+
+    <TextView
+    android:id="@+id/profile_tv_kids"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="20dp"
+    android:fontFamily="@font/dm_sans_medium"
+    android:text="Есть дети"
+    android:textColor="#2C2948"
+    android:textSize="22sp"
+    app:layout_constraintStart_toStartOf="@+id/textView2"
+    app:layout_constraintTop_toBottomOf="@+id/profile_separator_4" />
+
+    <View
+        android:id="@+id/profile_separator_5"
+        android:layout_width="320dp"
+        android:layout_height="1.5dp"
+        android:background="@color/violetDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_kids" />
+
+    <TextView
+        android:id="@+id/profile_tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="********"
+        android:textColor="#2C2948"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/profile_separator_5" />
+
+    <View
+        android:id="@+id/profile_separator_6"
+        android:layout_width="320dp"
+        android:layout_height="1.5dp"
+        android:background="@color/violetDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_password" />
 </androidx.constraintlayout.widget.ConstraintLayout>

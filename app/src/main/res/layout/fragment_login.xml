@@ -14,7 +14,7 @@
         android:fontFamily="@font/dm_sans_regular"
         android:gravity="center"
         android:text="Добро пожаловать!"
-        android:textColor="#202020"
+        android:textColor="#473766"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="65dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="104dp"
         android:hint="Email"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_tv_welcome">
@@ -36,8 +37,10 @@
             android:id="@+id/login_edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_with_rounded_corners_purple"
             android:fontFamily="@font/calibri"
             android:inputType="textEmailAddress|textCapSentences" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +60,10 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/calibri"
             android:imeOptions="actionGo"
+            android:background="@drawable/rectangle_with_rounded_corners_light_purple"
             android:inputType="textPassword" />
+
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -66,17 +72,18 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginHorizontal="72dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="104dp"
         android:background="@drawable/rectangle_with_rounded_corners"
-        app:backgroundTint="#845E92"
         android:fontFamily="@font/dm_sans_medium"
         android:text="Войти"
         android:textColor="#fff"
         android:textSize="26sp"
+        app:backgroundTint="#845E92"
         app:cornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_edt_passwordLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/login_edt_passwordLayout" />
 
     <TextView
         android:id="@+id/login_btn_forgotPassword"
@@ -89,13 +96,14 @@
         android:padding="8dp"
         android:text="Забыли пароль?"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/login_btn_enter"
-        app:layout_constraintTop_toBottomOf="@id/login_btn_enter" />
+        app:layout_constraintEnd_toEndOf="@+id/login_edt_passwordLayout"
+        app:layout_constraintTop_toBottomOf="@id/login_edt_passwordLayout" />
 
     <TextView
         android:id="@+id/login_tv_toRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="144dp"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/dm_sans_regular"
@@ -105,9 +113,8 @@
         app:layout_constraintEnd_toStartOf="@+id/login_btn_toRegister"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_btn_forgotPassword"
-        app:layout_constraintVertical_bias="0.4" />
+
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/login_btn_toRegister"
@@ -117,7 +124,8 @@
         android:focusable="true"
         android:fontFamily="@font/dm_sans_medium"
         android:padding="8dp"
-        android:text="Зарегистрироваться"
+        android:text="Зарегистрируйтесь"
+        android:textStyle="bold"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/login_tv_toRegister"
         app:layout_constraintEnd_toEndOf="parent"

@@ -144,18 +144,18 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="72dp"
         android:background="@drawable/rectangle_with_rounded_corners"
-        app:backgroundTint="#845E92"
         android:fontFamily="@font/dm_sans_medium"
-        android:text="Купить"
         android:letterSpacing="0"
+        android:text="Купить"
         android:textColor="#fff"
         android:textSize="26sp"
+        app:backgroundTint="#845E92"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.808" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
