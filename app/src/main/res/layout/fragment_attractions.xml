@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fPromos.PromosFragment">
+    tools:context=".fNews.NewsFragment">
 
     <ImageButton
-        android:id="@+id/promos_btn_back"
+        android:id="@+id/attractions_btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -20,67 +20,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/promos_tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/dm_sans_medium"
-        android:text="Акции"
-        android:textColor="@color/violetExtraDark"
-        android:textSize="42sp"
-        app:layout_constraintStart_toStartOf="@+id/promos_btn_back"
-        app:layout_constraintTop_toBottomOf="@+id/promos_btn_back" />
 
     <View
-        android:id="@+id/promos_firstSeparator"
+        android:id="@+id/attractions_separator"
         android:layout_width="wrap_content"
         android:layout_height="0.5dp"
+        android:layout_marginTop="24dp"
         android:background="@color/violetDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/promos_tv_title" />
-
+        app:layout_constraintTop_toBottomOf="@id/attractions_btn_back" />
 
     <ScrollView
+        android:id="@+id/attractions_scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/promos_firstSeparator">
+        app:layout_constraintTop_toBottomOf="@id/attractions_separator">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <include
-                android:id="@+id/row_promo_1"
-                layout="@layout/row_promo"
+                android:id="@+id/attractions_include_1"
+                layout="@layout/row_attraction_small"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include
-                android:id="@+id/row_promo_2"
-                layout="@layout/row_promo"
+                android:id="@+id/attractions_include_2"
+                layout="@layout/row_attraction_small"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/row_promo_1" />
+                app:layout_constraintTop_toBottomOf="@id/attractions_include_1" />
 
             <include
-                android:id="@+id/row_promo_3"
-                layout="@layout/row_promo"
+                android:id="@+id/attractions_include_3"
+                layout="@layout/row_attraction_small"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/row_promo_2" />
-
-            <include
-                android:id="@+id/row_promo_4"
-                layout="@layout/row_promo"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/row_promo_3" />
+                app:layout_constraintTop_toBottomOf="@id/attractions_include_2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
