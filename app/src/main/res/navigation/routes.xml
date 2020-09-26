@@ -46,4 +46,22 @@
         android:id="@+id/action_global_mainMenuFragment"
         app:destination="@id/mainMenuFragment"
         app:popUpTo="@id/routes" />
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fBuy.BuyFragment"
+        android:label="fragment_buy"
+        tools:layout="@layout/fragment_buy" >
+        <action
+            android:id="@+id/action_buyFragment_to_ticketFragment"
+            app:destination="@id/ticketFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_buyFragment"
+        app:destination="@id/buyFragment"
+        app:popUpTo="@id/routes" />
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fTicket.TicketFragment"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" />
 </navigation>
