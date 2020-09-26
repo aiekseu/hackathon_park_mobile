@@ -69,6 +69,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register2_edt_marriageStatusLayout"
+        style="@style/TextInputLayout.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="65dp"
@@ -92,9 +93,8 @@
         android:id="@+id/register2_tv_kidsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/dm_sans_regular"
-        android:text="Выберите пол:"
+        android:text="Есть ли у вас дети?"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/register2_edt_marriageStatusLayout"
         app:layout_constraintTop_toBottomOf="@+id/register2_edt_marriageStatusLayout" />
@@ -113,7 +113,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Да"
-            android:textColor="#303030"/>
+            android:textColor="#303030"
+            android:buttonTint="#D8D1E7"/>
 
         <RadioButton
             android:id="@+id/register2_rb_hasntKids"
@@ -121,7 +122,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Нет"
-            android:textColor="#303030"/>
+            android:textColor="#303030"
+            android:buttonTint="#D8D1E7"/>
 
     </RadioGroup>
 
@@ -151,7 +153,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Мужской"
-            android:textColor="#303030"/>
+            android:textColor="#303030"
+            android:buttonTint="#D8D1E7"/>
 
         <RadioButton
             android:id="@+id/register2_rb_sexFemale"
@@ -159,7 +162,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Женский"
-            android:textColor="#303030"/>
+            android:textColor="#303030"
+            android:buttonTint="#D8D1E7"/>
 
         <RadioButton
             android:id="@+id/register2_rb_sexOther"
@@ -167,7 +171,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Другой"
-            android:textColor="#303030"/>
+            android:textColor="#303030"
+            android:buttonTint="#D8D1E7"/>
     </RadioGroup>
 
 
@@ -181,6 +186,7 @@
         app:backgroundTint="#845E92"
         android:fontFamily="@font/dm_sans_medium"
         android:text="Регистрация"
+        android:letterSpacing="0"
         android:textColor="#fff"
         android:textSize="26sp"
         app:cornerRadius="25dp"
