@@ -20,7 +20,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/dm_sans_medium"
             android:paddingHorizontal="24dp"
-            android:text="Мероприятия на осень"
+            android:text="Мероприятия на октябрь"
             android:textColor="@color/violetExtraDark"
             android:textSize="22sp"
             app:layout_constraintStart_toStartOf="parent"
