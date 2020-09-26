@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="4dp"
-    app:cardBackgroundColor="@color/colorBackground"
+    app:cardBackgroundColor="#fff"
     app:cardElevation="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,10 +39,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/dm_sans_regular"
+            android:fontFamily="@font/dm_sans_medium"
             android:text="Свадебная Карусель"
             android:textAppearance="?attr/textAppearanceHeadline6"
             android:textSize="22sp"
+            android:textColor="@color/violetExtraDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/attr_iv_emoji"
@@ -80,7 +81,7 @@
             android:fontFamily="@font/dm_sans_medium"
             android:text="10 мин."
             android:textAppearance="?attr/textAppearanceBody2"
-            android:textColor="?android:attr/textColorSecondary"
+            android:textColor="#454545"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/attr_tv_textMinutesToWait"
             app:layout_constraintStart_toEndOf="@id/attr_tv_textMinutesToWait"
@@ -106,7 +107,7 @@
             android:background="#00000000"
             android:elevation="0dp"
             android:src="@drawable/ic_baseline_location_on_24"
-            android:tint="#967ACC"
+            android:tint="@color/violetMedium"
             app:layout_constraintEnd_toStartOf="@+id/attr_btn_buyTicket"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/attr_firstSeparator" />
@@ -128,8 +129,8 @@
             android:layout_height="wrap_content"
             android:background="#00000000"
             android:elevation="0dp"
-            android:src="@drawable/ic_baseline_money_24"
-            android:tint="#967ACC"
+            android:src="@drawable/ic_baseline_local_activity_24"
+            android:tint="@color/violetMedium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/attr_btn_findOnTheMap"
             app:layout_constraintTop_toTopOf="@+id/attr_btn_findOnTheMap" />
