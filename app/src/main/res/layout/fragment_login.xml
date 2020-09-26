@@ -67,6 +67,7 @@
         android:layout_marginHorizontal="72dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/rectangle_with_rounded_corners"
+        android:backgroundTint="#845E92"
         android:fontFamily="@font/dm_sans_medium"
         android:text="Войти"
         android:textColor="#000"
