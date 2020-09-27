@@ -61,26 +61,26 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <include
-                android:id="@+id/row_promo_2"
-                layout="@layout/row_promo"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/row_promo_1" />
+<!--            <include-->
+<!--                android:id="@+id/row_promo_2"-->
+<!--                layout="@layout/row_promo"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/row_promo_1" />-->
 
-            <include
-                android:id="@+id/row_promo_3"
-                layout="@layout/row_promo"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/row_promo_2" />
+<!--            <include-->
+<!--                android:id="@+id/row_promo_3"-->
+<!--                layout="@layout/row_promo"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/row_promo_2" />-->
 
-            <include
-                android:id="@+id/row_promo_4"
-                layout="@layout/row_promo"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/row_promo_3" />
+<!--            <include-->
+<!--                android:id="@+id/row_promo_4"-->
+<!--                layout="@layout/row_promo"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/row_promo_3" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

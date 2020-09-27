@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="4dp"
     app:cardBackgroundColor="#fff"
-    app:cardElevation="1dp">
+    app:cardElevation="1dp"
+    tools:context=".fAboutAttraction.AboutAttractionFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

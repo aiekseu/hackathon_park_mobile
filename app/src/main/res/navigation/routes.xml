@@ -68,10 +68,6 @@
             android:id="@+id/action_buyFragment_to_ticketFragment"
             app:destination="@id/ticketFragment" />
     </fragment>
-    <action
-        android:id="@+id/action_global_buyFragment"
-        app:destination="@id/buyFragment"
-        app:popUpTo="@id/routes" />
     <fragment
         android:id="@+id/ticketFragment"
         android:name="com.sconzo.hackathon_park_mobile.fTicket.TicketFragment"
@@ -104,19 +100,49 @@
         android:id="@+id/promosFragment"
         android:name="com.sconzo.hackathon_park_mobile.fPromos.PromosFragment"
         android:label="fragment_promos"
-        tools:layout="@layout/fragment_promos" />
+        tools:layout="@layout/fragment_promos" >
+        <action
+            android:id="@+id/action_promosFragment_to_buyFragment"
+            app:destination="@id/buyFragment"
+            app:popUpTo="@id/promosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/initiativesFragment"
         android:name="com.sconzo.hackathon_park_mobile.fInitiatives.InitiativesFragment"
         android:label="fragment_initiatives"
-        tools:layout="@layout/fragment_initiatives" />
+        tools:layout="@layout/fragment_initiatives" >
+        <action
+            android:id="@+id/action_initiativesFragment_to_aboutInitiativeFragment"
+            app:destination="@id/aboutInitiativeFragment"
+            app:popUpTo="@id/initiativesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/attractionsFragment"
         android:name="com.sconzo.hackathon_park_mobile.fAttractions.AttractionsFragment"
         android:label="fragment_attractions"
-        tools:layout="@layout/fragment_attractions" />
+        tools:layout="@layout/fragment_attractions" >
+        <action
+            android:id="@+id/action_attractionsFragment_to_aboutAttractionFragment"
+            app:destination="@id/aboutAttractionFragment"
+            app:popUpTo="@id/attractionsFragment" />
+    </fragment>
     <action
         android:id="@+id/action_global_attractionsFragment"
         app:destination="@id/attractionsFragment"
         app:popUpTo="@id/routes" />
+    <fragment
+        android:id="@+id/aboutAttractionFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fAboutAttraction.AboutAttractionFragment"
+        android:label="row_attraction"
+        tools:layout="@layout/row_attraction" >
+        <action
+            android:id="@+id/action_aboutAttractionFragment_to_buyFragment"
+            app:destination="@id/buyFragment"
+            app:popUpTo="@id/aboutAttractionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutInitiativeFragment"
+        android:name="com.sconzo.hackathon_park_mobile.fAboutInitiative.AboutInitiativeFragment"
+        android:label="fragment_about_initiative"
+        tools:layout="@layout/fragment_about_initiative" />
 </navigation>

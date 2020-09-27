@@ -27,7 +27,13 @@ class InitiativesFragment : Fragment() {
         initiatives_btn_back.setOnClickListener {
             findNavController().popBackStack()
         }
+
+        row_initiative_1.setOnClickListener{
+            findNavController().navigate(R.id.action_initiativesFragment_to_aboutInitiativeFragment)
+        }
     }
+
+
 
 
 }
