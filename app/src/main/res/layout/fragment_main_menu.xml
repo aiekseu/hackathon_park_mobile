@@ -13,7 +13,7 @@
         android:layout_marginBottom="32dp"
         android:fontFamily="@font/dm_sans_medium"
         android:text="Солнышко"
-        android:textSize="42sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         android:textColor="#473766"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,13 +27,12 @@
 
     <ImageView
         android:id="@+id/mainmenu_iv_logo_1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="28dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/register2_logo"
-
-
+        app:layout_constraintBottom_toTopOf="@+id/mainmenu_btn_toEvents"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -44,10 +44,10 @@ class RegisterFragment : MvpAppCompatFragment(), RegisterView {
             findNavController().popBackStack()
         }
 
-        register_edt_name.setErrorListener(register_edt_nameLayout)
-        register_edt_email.setErrorListener(register_edt_emailLayout)
-        register_edt_password.setErrorListener(register_edt_passwordLayout)
-        register_edt_repeatPassword.setErrorListener(register_edt_repeatPasswordLayout)
+//        register_edt_name.setErrorListener(register_edt_nameLayout)
+//        register_edt_email.setErrorListener(register_edt_emailLayout)
+//        register_edt_password.setErrorListener(register_edt_passwordLayout)
+//        register_edt_repeatPassword.setErrorListener(register_edt_repeatPasswordLayout)
 
 
         register_edt_name.doFocusGone {
